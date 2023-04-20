@@ -13,7 +13,7 @@ for (var i = 100 ; i >= 0 ; i--) {
 
 // Print the sequence 
 var arr = [];
-for (var i = 4; i>= -3.5 ; i=i -1.5){
+for (var i = 4; i>= -3.5 ; i=i-1.5){
     arr.push(i)   
 }
 console.log (arr)
@@ -31,3 +31,14 @@ for (var i = 1; i <=12 ; i++){
     factorial = factorial*i
 }
 console.log (factorial)
+
+// power function 
+function power(x,y) {
+    var p = 1 
+    for (var i = 1 ; i <= y ; i++){
+        p = x*p
+    }
+    return (p);
+}
+
+console.log (power(2,6))

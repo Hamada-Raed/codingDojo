@@ -50,3 +50,26 @@ console.log(result);
 
 // Array Reverse 
 
+function reverse(arr) {
+    for (var i = 1 ; i < arr.length/2 ; i++){
+        var temp = arr[i-1] // temp  = a
+        arr[i-1] = arr[arr.length - i] 
+        arr[arr.length - i] = temp
+    }
+    return arr;
+}
+   
+var result = reverse(["a", "b", "c", "d", "e"]);
+console.log(result); // we expect back ["e", "d", "c", "b", "a"]
+
+//  Fibonacci numbers 
+function fibonacciArray(n) {
+
+    var fibArr = [0, 1];
+    for (var i = 0 ; i < n-2 ; i++)
+    fibArr.push((fibArr[i] + fibArr[i+1]))
+    return fibArr;
+}
+   
+var result = fibonacciArray(10);
+console.log(result); 

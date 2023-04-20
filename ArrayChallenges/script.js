@@ -50,12 +50,3 @@ console.log(result);
 
 // Array Reverse 
 
-function reverse(arr) {
-        for (var i = arr.length - 1; i >= 0 ; i--) {
-            console.log(arr[i]);
-        }
-    return arr;
-}
-   
-var result = reverse(["a", "b", "c", "d", "e"]);
-console.log(result); // we expect back ["e", "d", "c", "b", "a"]

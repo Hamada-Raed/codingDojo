@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+section{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #121321;
+}
+section::before{
+    content: "";
+    position: absolute ;
+    height: 240px;
+    width: 240px;
+    background:linear-gradient(90deg, rgb(135, 12, 128);
+}

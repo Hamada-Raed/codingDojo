@@ -174,5 +174,25 @@ function convert(arabicNumber){
     console.log(romanLetter)
 
 }
-convert(10);
+convert(10); 
+
+
+// Add Two Numbers 
+// Input: l1 = [1,2,3], l2 = [1,2,3]
+// Output: [2,4,6]
+
+function addTwoNumbers(arr1,arr2){
+    var result =[]
+    for(var i = 0; i < arr1.length; i++){
+       let newarr = arr1[i] + arr2[i]
+       result.push(newarr)
+    }
+    return result
+}
+console.log (addTwoNumbers([1,2,3],[1,2,3]))
+
+// Add two Numbers
+// Input: l1 = [2,4,3], l2 = [5,6,4]
+// Output: [7,0,8]
+// Explanation: 342 + 465 = 807.
 

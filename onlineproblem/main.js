@@ -64,18 +64,121 @@ console.log(sumarray([1, 2, 3, 4]));
 //swap function
 
 function sorter(arr) {
-    var done = false, swapped; 
-
-while (!done) {
-    swapped = 0;
-    for (var i = 1; i < arr.length; i++) {
-        if (arr[i-1] > arr[i]) {
-            var swap = arr[i-1]
-            arr[i-1] = arr[i]
-            arr[i] = swap
-        }
-    } 
+    return
 }
+console.log(sorter([3, 2, 1]))
+
+//write a function that repeat the string n times 
+// example: n = 5 string = I, output = IIIII
+
+
+function repeat(str, n) {
+
+    // let newsting = '';
+    // for (var i = 0; i < n; i++) {
+    //     newsting = newsting + str;
+    // }
+    // return newsting;
+    return str.repeat(2, "Hello")
+}
+console.log(repeat("Hello", 2))
+
+
+// convert number to reversed array of digits 
+//example 123 => [3,2,1]
+
+//function takes num // empty arr // for loop num // push // reverse 
+//change the number to sting 
+//spilt the string to array 
+//change string in array to number 
+//reverse the array. 
+function resversedArr(num) {
+    return num.toString().split('').map((m) => Number(m)).reverse();
+}
+console.log(resversedArr("123"))
+// console.log(typeof resversedArr("123")) 
+
+
+//reverse fnuction 
+//example [3,2,1] => [1,2,3] // write a function to reverse an array without build-in fnuction 
+// loop in each index and swap the index 0 to index n - 1 
+
+function reverseArr(arr) {
+    for (var i = 0; i < arr.length / 2; i++) {
+        let swap = arr[i]
+        arr[i] = arr[arr.length - (i + 1)]
+        arr[arr.length - (i + 1)] = swap
+    }
     return arr
 }
-console.log(sorter([3, 2, 1])) 
+console.log(reverseArr([1, 2, 3, 4, 5]))
+
+// counting sheep 
+// you have an array of value true and false, count how many sheep present(true) otherwise absent
+var arr = [true, false, true, false,
+    true, false, true, true, true,
+    false, true, false, true, false,
+    false, true, true, true, false
+]
+
+function countSheep(arr) {
+
+    // let countPresent = 0;
+    // let countAbsent = 0;
+    // for (var i = 0; i < arr.length; i++) {
+    //     if (arr[i] == true) {
+    //         countPresent += 1;
+    //     }
+    //     else {
+    //         countAbsent += 1
+    //     }
+    // }
+
+    // return countAbsent;
+
+    let countPresent = 0; 
+    arr.map((n) => {
+        if (n === true) countPresent ++
+    })
+    return countPresent; 
+
+}
+console.log(countSheep(arr)); 
+
+
+// Get opposite 
+// example given 1, output = -1 etc 
+
+function opposite(num) {
+    return -num
+}
+console.log(opposite(1))
+// way to write if condition shorter 
+
+function greet(name){
+    return name !== "Hamada"? "Hello" + name + "!" : "Hello Hamada"
+}
+console.log(greet("Hamada")) 
+
+
+// Shorter way to write if condition 
+let name = "Haada"
+console.log(name !== "Hamada" ? "Fuck" : "Welcome")
+
+
+// Aneedle problem 
+//given an array of random element and one of them is needle find it and print the index
+var arr = [
+    4, "hamada", true, "needle", 6.86, "Hello"
+]
+function findNeedle(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === "needle") {
+            console.log(i)
+        }
+    }
+}
+findNeedle(arr)
+
+/// count of positive/ sum of negative 
+

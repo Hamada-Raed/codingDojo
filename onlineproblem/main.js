@@ -215,9 +215,24 @@ console.log(sumAndcount([1, 2, 3, -1, -3, -4, -5]))
 
 // Double char 
 //example Hamada => HHaammaaddaa 
+// split the string to arr 
+// create empty arr 
+// double the latter 
+// push the latter in the empty arr
+function DoubleChar(str) {
+    // let arr = str.split('');
+    // let result = [];
+    // for (var i = 0; i < str.length; i++) {
+    //     result.push(str[i] + str[i])
+    // }
+    // return result.join('');
+    return str.split('').map((i)=> i.repeat(2)).join('')
+}
+console.log(DoubleChar('Hamada')); 
 
-function DoubleChar(sting){
+//write a function that does four basic methematical. (+,-,*,/)
 
+function operation(num1,num2){
+    
 
 }
-console.log()

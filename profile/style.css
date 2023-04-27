@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0; 
-    outline: 1px red solid;
+    /* outline: 1px red solid; */
 }
 .maincontiner{
     width: 970px;
@@ -51,6 +51,7 @@
 .contant{
     width: calc(100%/3);
     margin: 20px;
+    border: 2px solid black;
 }
 .img{
     width:100% ;

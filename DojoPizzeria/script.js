@@ -1,7 +1,7 @@
 var pizza1 = pizzaOven("deep dish", "traditional", ["mozzarella"], ["pepperoni", "sausage"])
 var pizza2 = pizzaOven("hand tossed", "marinara", ["mozzarella", "feta"],["mushrooms", "olives", "onions"]) 
-var pizza3 = pizzaOven ("Cheese Crust Pizza","Buffalo Sauce","Cheddar",["mushrooms", "olives", "onions"])
-var pizza4 = pizzaOven ("Cheese Crust Pizza","Italian Classics","Yellow Cheesee",["mushrooms", "olives", "onions"]) 
+var pizza3 = pizzaOven ("Cheese Crust Pizza","Buffalo Sauce",["Cheddar"],["mushrooms", "olives", "onions"])
+var pizza4 = pizzaOven ("Cheese Crust Pizza","Italian Classics",["Yellow Cheesee"],["mushrooms", "olives", "onions"]) 
 // function to create the list of pizza 
 function pizzaOven(crustType, sauceType, cheeses ,toppings){
     var pizza = {}
@@ -18,6 +18,10 @@ function randomPizza (pizza){
     console.log("The random type of pizza is pizza " + randomNum);
 }
 randomPizza();
+// console.log(pizza1.cheeses[0])
+// console.log(pizza1)
+// console.log(pizza3.cheeses[0])
+// console.log(pizza3.toppings[1])
 
 
 

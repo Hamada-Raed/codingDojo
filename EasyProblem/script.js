@@ -17,18 +17,13 @@ function Merge(list1, list2) {
 
     var listmerged = [];
     for (var i = 0; i < list1.length; i++) {
-        for (var j = 0; j < list2.length; j++) {
-            if (list1[i] == list2[j]) {
-                listmerged.push(list1[i])
-            }
-            else if (list1[i] > list2[j]) {
-                listmerged.push(list1[i])
-            }
-            else {
-                listmerged.push(list1[i])
-            }
-        }
+        listmerged.push(list1[i])
     }
+    for (var j = 0; j < list1.length; j++) {
+        listmerged.push(list1[j])
+    }
+    //instead of bulid-in function we can build function to sort 
+    return listmerged.sort();
 }
 console.log(Merge([1, 2, 4], [1, 3, 4]))
 
@@ -365,4 +360,4 @@ function flatten(arr2d) {
 var result = flatten([[2, 5, 8], [3, 6, 1], [5, 7, 7]]);
 console.log(result); // we expect to get back [2, 5, 8, 3, 6, 1, 5, 7, 7]
 
-//
+//f

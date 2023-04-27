@@ -64,9 +64,21 @@ console.log(sumarray([1, 2, 3, 4]));
 //swap function
 
 function sorter(arr) {
-    return
+
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                let swap = arr[i];
+                arr[i] = arr[j];
+                arr[j] = swap;
+            }
+        }
+    }
+    return arr
+    // return arr.sort()
+
 }
-console.log(sorter([3, 2, 1]))
+console.log(sorter([2, 3, 1, 4, 2, 6, 7, 1, 2, 3]))
 
 //write a function that repeat the string n times 
 // example: n = 5 string = I, output = IIIII
@@ -136,14 +148,14 @@ function countSheep(arr) {
 
     // return countAbsent;
 
-    let countPresent = 0; 
+    let countPresent = 0;
     arr.map((n) => {
-        if (n === true) countPresent ++
+        if (n === true) countPresent++
     })
-    return countPresent; 
+    return countPresent;
 
 }
-console.log(countSheep(arr)); 
+console.log(countSheep(arr));
 
 
 // Get opposite 
@@ -155,10 +167,10 @@ function opposite(num) {
 console.log(opposite(1))
 // way to write if condition shorter 
 
-function greet(name){
-    return name !== "Hamada"? "Hello" + name + "!" : "Hello Hamada"
+function greet(name) {
+    return name !== "Hamada" ? "Hello" + name + "!" : "Hello Hamada"
 }
-console.log(greet("Hamada")) 
+console.log(greet("Hamada"))
 
 
 // Shorter way to write if condition 
@@ -181,4 +193,31 @@ function findNeedle(arr) {
 findNeedle(arr)
 
 /// count of positive/ sum of negative 
+//write a function that return count of positive and sum of negative 
+function sumAndcount(arr) {
+    let result = [];
+    let count = 0;
+    let sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] >= 0) {
+            count++
+        }
+        if (arr[i] < 0) {
+            sum += arr[i]
+        }
+    }
+    // result.push(count);
+    // result.push(sum);
+    return [count, sum];
+}
+console.log(sumAndcount([1, 2, 3, -1, -3, -4, -5]))
 
+
+// Double char 
+//example Hamada => HHaammaaddaa 
+
+function DoubleChar(sting){
+
+
+}
+console.log()

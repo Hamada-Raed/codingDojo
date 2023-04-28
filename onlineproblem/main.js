@@ -231,8 +231,15 @@ function DoubleChar(str) {
 console.log(DoubleChar('Hamada')); 
 
 //write a function that does four basic methematical. (+,-,*,/)
+//function takes two numbers and operarion 
+// 
+function operation(num1,num2,op){
+    let result = [] ; 
+    if (op === + ){
+        result = num1 + num2; 
+    }
+    return result; 
 
-function operation(num1,num2){
-    
 
 }
+console.log (operation(2,1,+))

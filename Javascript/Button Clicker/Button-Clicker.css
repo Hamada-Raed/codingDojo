@@ -1,0 +1,83 @@
+/* Here is the style of header div */
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.header {
+    background-color: #cccccc;
+    display: flex;
+    width: 57%;
+    margin: 0% 20% 2% 20%;
+}
+#title {
+    color: white;
+    padding: 5px;
+    margin: 10px 0px 10px 10px;
+}
+#input-text{
+    width: 40%;
+    justify-content: center;
+    height: 20px;
+    margin: 20px 0px 10px 50px;
+}
+#button-login{
+    display: inline-block;
+    margin: 20px 0px 20px 200px;
+    box-shadow:black 2px solid;
+    color: white;
+    background-color: #2b6de8;
+}
+/* Here is the body div up-left */
+.section-1,.section-2{
+    display: flex;
+    border: 1px black solid;
+    width: 40%;
+    margin: 0% 20% 2% 20%; 
+    height: 220px;  
+}
+.sub-section-1,.sub-section-3 {
+    margin: 0px 0px 30px 20px;
+    display: inline-block;
+}
+.italic-text{
+    font-style: italic; 
+    margin-left: 15px; 
+}
+.italic-text-1{
+    font-style: italic;  
+}
+#button-13Likes,#button-37Likes{
+    background-color: #ffdc5a;
+    width: 80px;
+    height: 30px;
+}
+.paragraph,.paragraph-1{
+    position: relative;
+    left: 150px;
+    bottom: 110px;
+    font-size :large;
+}
+/* Here is the body div up-Right */
+.sub-section-2{
+    display: inline-block;
+    width: 40%;
+    position: relative;
+    left: 45%; 
+    border: 1px black solid;   
+    height: 130px;   
+}
+.text{
+    font-size: 30px;
+    float: left;
+    margin: 5px 0px 0px 15px ;
+}
+#Word-You{
+    font-size: 33px;
+}
+#button-Add-Def{
+    background-color: #82cc7c;
+    width: 90%;
+    height: 30px;
+    margin:10px;
+    font-size: 20px;
+}

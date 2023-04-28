@@ -1,0 +1,207 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.header 
+{
+    background-color: #000000;
+    color: white; 
+    display: flex;
+    height: 40px;
+    padding: 4px; 
+    width: 100%;
+    box-shadow: 2px #e5e5e5 solid;
+    justify-content: left;  
+    align-items: center;  
+    
+}
+.nav-title 
+{
+    margin: 0% 0% 0% 15%  
+}
+.nav-links 
+{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    list-style-type: none;  
+    padding: 50px; 
+}
+.active 
+{   
+    color: white;
+    font-weight: bold;
+}
+li > a {
+    color: #bababa;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn {
+    background-color: rgb(40, 164, 213);
+    color: #ffffff;
+    width: 100px;
+    height: 30px;
+    box-shadow: 2px 2px 2px 2px #151515;
+    position: relative;
+    left: 450%;  
+}
+.main{
+    display: flex;
+    width: 40%;
+    margin: 5% 50% 0% 15%;
+    flex-direction: column;
+    border: gray 1px solid;
+    
+}
+.top{
+    background-color: #00a6bb;  
+}
+.sub-top{
+    margin: 0px 0px 0px 40px;
+}
+#img-one{
+    height:100px;
+    width: 100px;
+    position: relative;
+    top : 50px
+}
+.text{
+    margin: 40px 0px 10px 40px;
+    display: flex;
+    flex-direction: column;
+}
+#img-two{
+    height: 20px;
+    width: 15px;
+}
+p{
+    margin: 0px;
+}
+#img-three{
+    height: 20px;
+    width: 20px;  
+}
+.special-paragraph{
+    margin: 20px 0px 0px 0px;   
+}
+a{
+    vertical-align: super;
+    padding: 7px;
+}
+.main-2{
+    display: flex;
+    width: 40%;
+    margin: 1% 0% 0% 15%;
+    flex-direction: column;
+    border: gray 1px solid;
+    
+}
+.top-2, .top-3{
+    background-color: #333333; 
+    align-items: center;
+    color: #ffffff; 
+}
+.top-2 > h1 {
+    margin: 0px 0px 0px 40px;
+}
+.sub-top-2{
+    margin: 20px 0px 0px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.sub-top-2 > p {
+    color: #898989;
+}
+.main-3{
+    display: flex;
+    width: 25%;
+    position: absolute;
+    top: 16.9%;
+    right: 17%;
+    flex-direction: column;
+    border: gray 1px solid;  
+}
+
+.top-3 > h1 {
+    margin: 0px 0px 0px 40px;
+}
+.sub-top-3{
+    margin: 20px 0px 0px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Spectial-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 2em;
+    padding-bottom: 10px ;
+    float: left;
+}
+.sp-text {
+
+    font-size: larger;
+    float:left;
+    padding: 10px;
+}
+.img-sidebar {
+    width: 40px;
+    height: 40px;
+    margin-left: 80px ;
+}
+.img1-sidebar {
+    width: 40px;
+    height: 40px;
+    margin:0px;
+}
+
+.main-4 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 110%; 
+    width: 100%;
+    border: #333333 1px solid;
+
+}
+.top-4 {
+    background-color: #333333; 
+    align-items: center;
+    color: #ffffff; 
+    text-align: center;
+}
+.top-4 > h1 {
+    margin: 0px 0px 0px 40px;
+}
+.sub-top-4{
+    margin: 20px 0px 0px  40px;
+    display: flex;
+    flex-direction: column;
+}
+.sub-btn {
+    border: #333333 1px solid;
+    position: relative;
+    left: 0px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0px;
+    color: #09549a;
+    font-size: 20px;
+}
+#Spectial-img1{
+    width: 50px;
+    height: 50px;
+    border-radius: 2em;
+    padding-bottom: 10px ;
+    float: left;
+} 
+#Spectial-img2{
+    width: 50px;
+    height: 50px;
+    border-radius: 2em;
+    padding-bottom: 10px ;
+    float: left;
+}

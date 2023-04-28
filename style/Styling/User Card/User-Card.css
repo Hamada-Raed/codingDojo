@@ -1,0 +1,46 @@
+.main{
+    display: flex;
+    width: 50%;
+    margin: 5% 35% 0% 15%;
+    flex-direction: column;
+    border: gray 1px solid;
+}
+.top{
+    background-color: #00a6bb;  
+}
+.sub-top{
+    margin: 0px 0px 0px 40px;
+}
+#img-one{
+    height:100px;
+    width: 100px;
+    position: relative;
+    top : 50px
+}
+.text{
+    margin: 40px 0px 10px 40px;
+    display: flex;
+    flex-direction: column;
+}
+#img-two{
+    height: 20px;
+    width: 15px;
+}
+p{
+    margin: 0px;
+}
+#img-three{
+    height: 20px;
+    width: 20px;  
+}
+.special-paragraph{
+    margin: 20px 0px 0px 0px;   
+}
+a{
+    vertical-align: super;
+    padding: 7px;
+}
+
+
+
+ 

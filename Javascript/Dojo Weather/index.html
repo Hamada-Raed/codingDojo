@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Here is the Header of the page -->
+    <div class="header">
+        <div class="row">
+            <div class="title">DojoWeather</div>
+            <div class="cities" onclick="alert('Loading weather report')">Burbank</div>
+            <div class="cities" onclick="alert('Loading weather report')">Chicago</div>
+            <div class="cities" onclick="alert('Loading weather report')">Dallas</div>
+        </div>
+    </div>
+
+    <div class="continer">
+        <div class="justifyrow">
+            <div class="city">San Jose</div>
+            <div class="showTemp">show temperature in
+                <select name="temperature" id="temp" onchange="convert(this)">
+                    <option value="Celi"><button>&#xb0;C</button></option>
+                    <option value="Fernh"><button>&#xb0;F</button></option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="flexUp">
+            <div class="boxes">Today
+                <img src="assets/some_rain.png" alt="rain img" class="img" onmouseover="changeimg(this)" mouseout>
+                <div class="num">
+                    <span class="low">24</span>
+                    <span class="high">18</span>
+                </div>
+            </div>
+            <div class="boxes box">Tomorrow
+                <img src="assets/some_sun.png" alt="rain img" class="img">
+                <div class="num">
+                    <span class="low">27</span>
+                    <span class="high">19</span>
+                </div>
+            </div>
+            <div class="boxes box">Friday
+                <img src="assets/some_clouds.png" alt="rain img" class="img">
+                <div class="num">
+                    <span class="low">21 </span>
+                    <span class="high">16</span>
+                </div>
+            </div>
+            <div class="boxes box">Saturday
+                <img src="assets/some_sun.png" alt="rain img" class="img">
+                <div class="num">
+                    <span class="low">26</span>
+                    <span class="high">21</span>
+                </div>
+            </div>
+        </div>
+        <div id="cookies">
+            <div class="cookieImg"><img src="assets/cookie.png" alt="cookieImg"></div>
+            <div class="cookieText">
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize content and
+                    ads, to provide scoial media features and to analyze our traffic. <a href="#">Read more...</a>
+                </p>
+            </div>
+            <div><button id="btn" onclick="removeCookie(this)">I Accept</button></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

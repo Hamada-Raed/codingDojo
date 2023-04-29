@@ -233,13 +233,41 @@ console.log(DoubleChar('Hamada'));
 //write a function that does four basic methematical. (+,-,*,/)
 //function takes two numbers and operarion 
 // 
-function operation(num1,num2,op){
-    let result = [] ; 
-    if (op === + ){
-        result = num1 + num2; 
-    }
-    return result; 
+function operation(num1, num2, op) {
+    // let result = [];
+    // if (op === "+") {
+    //     result = num1 + num2;
+    // }
+    // else if (op === "-") {
+    //     result = num1 - num2;
+    // }
+    // else if (op === "*") {
+    //     result = num1 * num2;
+    // }
+    // else {
+    //     result = num1 / num2
+    // }
+    // return result; 
+    return eval(num1+op+num2);
+
 
 
 }
-console.log (operation(2,1,+))
+console.log(operation(2, 2, "/"))
+
+//write a function that returns array of numbers that represent if the number
+//=> has a square root if not return the square
+//for example arr = [1,2,4,9] = > [1,4,2,3]
+function square(arr){
+    let result = []; 
+    for(var i=0; i<arr.length; i++){
+        if (Number.isInteger(Math.sqrt(arr[i]))){
+            result.push(Math.sqrt(arr[i]))
+        }
+        else {
+            result.push(arr[i]*arr[i])
+        }
+    }
+    return result; 
+} 
+console.log(square([1,2,4,8,9,16]))

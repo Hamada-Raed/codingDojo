@@ -226,9 +226,9 @@ function DoubleChar(str) {
     //     result.push(str[i] + str[i])
     // }
     // return result.join('');
-    return str.split('').map((i)=> i.repeat(2)).join('')
+    return str.split('').map((i) => i.repeat(2)).join('')
 }
-console.log(DoubleChar('Hamada')); 
+console.log(DoubleChar('Hamada'));
 
 //write a function that does four basic methematical. (+,-,*,/)
 //function takes two numbers and operarion 
@@ -248,7 +248,7 @@ function operation(num1, num2, op) {
     //     result = num1 / num2
     // }
     // return result; 
-    return eval(num1+op+num2);
+    return eval(num1 + op + num2);
 
 
 
@@ -258,16 +258,147 @@ console.log(operation(2, 2, "/"))
 //write a function that returns array of numbers that represent if the number
 //=> has a square root if not return the square
 //for example arr = [1,2,4,9] = > [1,4,2,3]
-function square(arr){
-    let result = []; 
-    for(var i=0; i<arr.length; i++){
-        if (Number.isInteger(Math.sqrt(arr[i]))){
+function square(arr) {
+    let result = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (Number.isInteger(Math.sqrt(arr[i]))) {
             result.push(Math.sqrt(arr[i]))
         }
         else {
-            result.push(arr[i]*arr[i])
+            result.push(arr[i] * arr[i])
         }
     }
-    return result; 
-} 
-console.log(square([1,2,4,8,9,16]))
+    return result;
+}
+console.log(square([1, 2, 4, 8, 9, 16]))
+
+//count by x 
+// write a function takes two parameter and  returns array of number that time x by n
+//example f(x,n)= f(1,10) = 1,2,3,4,5,6,7,8,9,10
+//example f(x,n) = f(2,5) = 2,4,6,8,10 
+function times(x, n) {
+    let result = [];
+    for (var i = 1; i <= n; i++) {
+        result.push(x * i)
+    }
+    return result;
+
+}
+console.log(times(1, 10))
+
+//Remove string spaces 
+
+function removeSpaces(str) {
+    return str.split(" ").join("")
+}
+console.log(removeSpaces("H a m a d a asdf asdfasdf asdfasf"))
+
+
+// inverse function 
+// Given a set of numbers return set of inverse of numbers
+// example [1,2,3,-1,-2] => [-1,-2,-3,1,2]
+
+function inverse(arr) {
+    // let result = [];
+    // for (var i = 0; i < arr.length; i++) {
+
+    //     result.push(-1 * arr[i])
+
+    // }
+    // return result
+    return arr.map((i) => -i)
+}
+console.log(inverse([3, -1, -2]))
+
+//convert boolean value to string 
+//for example [true, false] => [yes, no]
+
+function booleanToString(bool) {
+    // if (bool == "True"){
+    //     console.log("YES");
+    // }
+    // else {
+    //     console.log("NO");
+    // }
+    return bool == " True" ? "YES" : "NO";
+}
+booleanToString("True");
+
+
+// Reversing words in a string 
+// for example [Hi there] =? [there Hi] 
+
+function reverseWords(str) {
+    return str.split(" ").reverse().join(" ")
+}
+console.log(reverseWords("hi there"))
+
+
+// calculate average 
+function average(arr) {
+    let sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(average([1, 2, 3, 4, 5]));
+
+
+function switchTostring(num) {
+    switch (num) {
+        case 1: return "one";
+            break;
+        case 2: return "Two";
+            break;
+        case 3: return "Three";
+            break;
+        case 4: return "Four";
+            break;
+        case 5: return "Five";
+            break;
+        case 6: return "Six";
+            break;
+        case 7: return "Seven";
+            break;
+        case 8: return "Eight";
+            break;
+        case 9: return "Nine";
+            break;
+        case 0: return "Zero";
+            break;
+
+        default:
+            return "Wrong number";
+
+    }
+}
+console.log(switchTostring(4))
+
+// Do I get a bouns 
+//write a function that takes two arguments salary and bouns if the bouns is true multiple salary by 0.1 if 
+// if false print a massage no bouns try in another time 
+
+function bouns(salary, bool) {
+    let total = 0;
+    if (bool == true) {
+        total = salary + (salary * 0.1);
+    }
+    else {
+        total = salary
+        console.log("no bouns, try in another time ");
+    }
+    return total
+}
+console.log(bouns(1100, false))
+
+// romove the last digit in the string
+//for example if ! in hi!!! => hi!!
+
+function romoveSymbol(string) {
+    return string.replace(/!$/, "") // /symbol$/ is a regular expression. 
+
+}
+console.log(romoveSymbol("Hi!!!$!"))
+

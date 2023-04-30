@@ -402,3 +402,17 @@ function romoveSymbol(string) {
 }
 console.log(romoveSymbol("Hi!!!$!"))
 
+//volume of cube 
+function volumeofCube(x,y,z) 
+{
+    return x*y*z; 
+}
+console.log(volumeofCube(3,4,5)) 
+
+
+// round number 
+function round(num) {
+  return num.toFixed(2)
+}
+console.log(round(4.44444))
+

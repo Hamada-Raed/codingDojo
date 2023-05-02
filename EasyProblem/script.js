@@ -208,7 +208,7 @@ console.log(count([3, 4, -2, 7, 16, -8, 0]));
 
 //Code Flow - Is the Array a Palindrome 
 function isPal(arr) {
-    for (var left = 0; left < arr.length / 2; left++) {
+    for (var left = 0; left < arr.length/2; left++) {
         var right = (arr.length - 1) - left;
 
         if (arr[left] != arr[right]) {

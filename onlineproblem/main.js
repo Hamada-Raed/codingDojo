@@ -424,10 +424,78 @@ console.log(round(4.44444))
 // remove the zero digit
 //*** */
 function noBoringZero(n) {
-    let stringParam = String(n); 
-    while (stringParam.endsWith(0)){ //
-        stringParam = stringParam.slice(0, stringParam.length -1); 
+    let stringParam = String(n);
+    while (stringParam.endsWith(0)) { //
+        stringParam = stringParam.slice(0, stringParam.length - 1);
     }
-    return stringParam ; 
+    return stringParam;
 }
-console.log(noBoringZero(9000)); 
+console.log(noBoringZero(9000));
+
+//Vowel Remover  
+function vowelRemover(string) {
+    // let vowel = ["a", "e", "i", "o", "u"];
+    // let result = [];
+    // for (let i = 0; i < string.length; i++) {
+    //     if (!vowel.includes(string[i])) { // !statment means that not equal
+    //         result.push(string[i])
+    //     }
+    // }
+    // return result.join("");
+    return string.replace(/[aeiou]/g, "")
+}
+console.log(vowelRemover("ahhhoihheeeeeee"))
+
+// remove a symbol or a letter from a string 
+function removeSymbol(string) {
+    return string.replace(/!/g, "")
+
+}
+console.log(removeSymbol("hello world !!!!!"))
+
+//reverse a word 
+function reverseWord(string) {
+    // let result = '';
+    // for (var i = string.length; i >= 0; i--) {
+    //     result += string[i];
+    // }
+    // return result;
+    return string.split('').reverse().join('');
+}
+console.log(reverseWord("hello"));
+
+// factorizl but in different way 
+// for example, given non empty array of numbers multiple as [1,2,3,4] = 1*2*3*4 = 24
+
+function factorizl(array) {
+    let fact = 1;
+    for (var i = 0; i < array.length; i++) {
+        fact *= array[i];
+    }
+    return fact;
+
+}
+console.log(factorizl([1, 2, 3, 4]));
+
+
+// sum the num from zero to the num you want 
+
+function sum(n) {
+    let sum = 0;
+    for (var i = 1; i <= n; i++) {
+        sum += i;
+    }
+    return sum;
+}
+console.log(sum(2)); 
+
+//Remove First and Last Character 
+
+
+
+
+
+
+
+
+

@@ -403,16 +403,31 @@ function romoveSymbol(string) {
 console.log(romoveSymbol("Hi!!!$!"))
 
 //volume of cube 
-function volumeofCube(x,y,z) 
-{
-    return x*y*z; 
+function volumeofCube(x, y, z) {
+    return x * y * z;
 }
-console.log(volumeofCube(3,4,5)) 
+console.log(volumeofCube(3, 4, 5))
 
 
 // round number 
 function round(num) {
-  return num.toFixed(2)
+    return num.toFixed(2)
 }
 console.log(round(4.44444))
 
+
+// reomve the zeros from the end of the the number. 
+//for example 1050 => 105 
+
+// convert the number to a string 
+// check if the last index === zero remove // in while loop. 
+// remove the zero digit
+//*** */
+function noBoringZero(n) {
+    let stringParam = String(n); 
+    while (stringParam.endsWith(0)){ //
+        stringParam = stringParam.slice(0, stringParam.length -1); 
+    }
+    return stringParam ; 
+}
+console.log(noBoringZero(9000)); 

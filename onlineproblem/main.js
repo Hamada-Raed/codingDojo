@@ -487,7 +487,7 @@ function sum(n) {
     }
     return sum;
 }
-console.log(sum(2)); 
+console.log(sum(2));
 
 //Remove First and Last Character 
 

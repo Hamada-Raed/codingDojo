@@ -34,7 +34,7 @@ students = [
 
 def iterateDictionary(some_list):
     for i in range(len(some_list)):
-        print(some_list[i])
+        print(some_list[i]['first_name'] + some_list[i]['last_name'])
 
 
 print(iterateDictionary(students))
@@ -58,8 +58,6 @@ dojo = {
 }
 lengthLocations = len(dojo['locations'])
 lengthInstructors = len(dojo['instructors'])
-print(lengthLocations)
-print(lengthInstructors)
 
 print(f"{lengthLocations} Locations")
 for i in dojo['locations']:

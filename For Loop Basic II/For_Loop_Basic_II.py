@@ -129,10 +129,18 @@ print("*"*50)
 
 
 def reverseList(arr):
-    # reversed = []
-    # for i in range(3 , -1, -1):
-    #     reversed.append(arr[i])
-    # return reversed 
-    return arr[::-1]
+    reversed = []
+    for i in range(len(arr) , -1, -1):
+        reversed.append(arr[i])
+    return reversed 
+    # return arr[::-1]
 
-print(reverseList([1, 2, 3, 4]))
+print(reverseList([1, 2, 3, 4, 5]))
+
+
+def reverse_list(arr):
+    for i in range(0, len(arr)//2):
+        x = arr[i] 
+        arr[i] = arr[len(arr)-1-i] 
+        arr[len(arr)-1-i] = x 
+    return arr

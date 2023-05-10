@@ -25,7 +25,6 @@ Hamada = User("Hamada Raed", "Hamada@gmail.com", 1000)
 Mohammad = User("Mohammad Tamer ", "Mohammad@gmail.com", 1230)
 Nehal = User("Nehal Omer ", "Nehal@gmail.com", 4903)
 
-Hamada.display_user_balance().withdrawal(100).display_user_balance()
-User.transfer(Hamada, Mohammad, 200)
+
 Hamada.display_user_balance()
 Mohammad.display_user_balance()

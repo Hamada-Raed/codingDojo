@@ -1,3 +1,24 @@
+
+class User:		
+    def __init__(self, name, email, account_balance):
+        self.name = name
+        self.email = email
+        self.account_balance = account_balance
+
+    def deposit(self, amount):
+        self.account_balance += amount
+
+    def withdrawal(self, amount):
+        self.account_balance -= amount
+
+    def display_user_balance(self):
+
+        print(f"The username is {self.name} and the balance is ${self.account_balance}")
+
+    def transfer(from_account, to_account, account_balance):
+        from_account.withdrawal(account_balance)
+        to_account.deposit(account_balance)
+        
 class BankAccount:
     def __init__(self, int_rate, balance):
         self.int_rate = int_rate
@@ -22,20 +43,3 @@ class BankAccount:
 
     def display_account_info(self):
         print(f"Balance: ${self.balance}")
-
-
-client1 = BankAccount(5, 200)
-client1.deposit(100)
-client1.withdraw(200)
-client1.display_account_info()
-client1.yield_interest()
-
-client2 = BankAccount(5, 500)
-client2.withdraw(80)
-client2.display_account_info()
-client2.yield_interest()
-
-client3 = BankAccount(5, 600)
-client3.deposit(300)
-client3.display_account_info()
-client3.yield_interest()

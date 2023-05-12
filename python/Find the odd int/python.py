@@ -2,10 +2,10 @@
 # There will always be only one integer that appears an odd number of times.
 
 def counter_of_odd(arr):
-    count = arr[0] # count = 1
+    count = arr[0] 
     
-    for i in range(len(arr)):  # i = [0,1,2,3,4,..]
-        if arr[0] == arr[i]: # if arr[0] = 1 == arr[i] == 1 
+    for i in range(len(arr)):  
+        if arr[0] == arr[i]: 
             arr[i] = count
     return count
 

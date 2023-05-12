@@ -1,49 +1,50 @@
-class User:		# here's what we have so far
-    def __init__(self, name, email, BankAccount):
+class Student:
+    def __init__(self, name, id):
         self.name = name
-        self.email = email
-        self.account = BankAccount(int_rate = 0.02 , balance = 0)
+        self.id = id
+    def display (self): 
+        print (f"{self.name} = {self.id}")
 
-    def deposit(self, amount):
-        self.account_balance += amount
-
-    def withdrawal(self, amount):
-        self.account_balance -= amount
-
-    def display_user_balance(self):
-
-        print(f"The username is {self.name} and the balance is ${self.account_balance}")
-
-    def transfer(from_account, to_account, account_balance):
-        from_account.withdrawal(account_balance)
-        to_account.deposit(account_balance)
-        
-        
-class BankAccount:
-    def __init__(self, int_rate, balance):
-        self.int_rate = int_rate
-        self.balance = balance
-
-    def deposit(self, amount):
-        self.balance += amount
-
-    def withdraw(self, amount):
-        if self.balance > amount:
-            self.balance -= amount
+class Course:
+    def __init__(self, name, students = None):
+        self.name = name
+        if students is None:
+            self.students = []
         else:
-            print("Insufficient funds: Charging a $5 fee")
-            self.balance -= 5
+            self.students = students
 
-    def yield_interest(self):
-        if self.balance > 0:
-            yield_ = self.balance * self.int_rate
-            self.balance = self.balance + yield_
-            print(
-                f" Because your current balance is positive, we increae yout balance to {self.balance}")
+    def add_student(self, student):
+        self.students.append(student)
 
-    def display_account_info(self):
-        print(f"Balance: ${self.balance}")
+s1 = Student("Alice", 1)
+s1.display()
+s2 = Student("Bob", 2)
+c1 = Course("Math", [s1, s2])
+print(c1.students[0].id) # Output: "Alice"
 
-Hamada_acount = BankAccount(0.02,1000)
-Hamada = User("Hamada" ,"H@gmail.com", BankAccount(0.02,1000))
-Hamada.display_user_balance()
+#Another example of association
+class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+class Driver:
+    def __init__(self, name):
+        self.name = name
+        self.cars = []
+
+    def add_car(self, car):
+        self.cars.append(car)
+
+car1 = Car('Toyota', 'Camry')
+car2 = Car('Honda', 'Civic')
+
+driver1 = Driver('Alice')
+driver1.add_car(car1)
+driver1.add_car(car2)
+
+
+
+for car in driver1.cars:
+    print(car.make, car.model)
+

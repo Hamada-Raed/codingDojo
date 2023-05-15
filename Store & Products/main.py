@@ -1,12 +1,13 @@
 
 class Store:
-    def __init__(self, name, product=[],prod =[]):
+    def __init__(self, name):
         self.name = name
-        self.product = product
-        self.prod = Product(price = 0) 
-    def add_product(self, new_product):
+        self.product = []
+        
+    def add_product(self, name, price, category):
+        new_product = Product(name,price,category)
         self.product.append(new_product)
-
+        
     def sell_product(self, id):
         self.product.remove(self.id)
 
@@ -24,15 +25,17 @@ class Product:
         self.category = category
 
     def update_price(self, percent_change, is_increased):
-        self.percent_change = percent_change
-        self.is_increased = is_increased
+        yield_value  = self.price * percent_change
         if is_increased == True:
-            self.price += percent_change
+            self.price += yield_value
         else:
-            self.price -= percent_change
+            self.price -= yield_value
 
     def info(self):
         print(
             f" Name is {self.name}, category is {self.category} and price is {self.price}")
 
 
+
+Hamada_store = Store ("Hamada")
+Hamada_store.add_product("meat" , 100 , "Engine")

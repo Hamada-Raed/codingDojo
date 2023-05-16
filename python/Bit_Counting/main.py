@@ -9,16 +9,15 @@
 # (1000) = 2^3*1 + 2^2 *0 + 2^1 *0 + 2^0 * 0 = 8
 
 def decimal_to_binary(decimal_num):
-    binary_num = ""
-    while decimal_num == 0:
-        
-        if decimal_num > 2: 
-            remainder = decimal_num % 2
-            decimal_num = (decimal_num / 2)
-            binary_num += str(remainder) 
-        decimal_num -= 1 
+    binary_num = ''
+    while type (decimal_num) is int():
+        if decimal_num > 0 : 
+            binary_num = '' 
+            remainder = decimal_num % 2 
+            decimal_num /= 2 
+            binary_num += remainder
     return binary_num
-print(decimal_to_binary(8))
+print (decimal_to_binary(5))
 
 
 # def decimal_to_binary(num):

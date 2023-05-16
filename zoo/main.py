@@ -21,7 +21,6 @@ class Animal:
         print(
             f"Name: {self.name}\n healty level:{self.healty_level}\n happiness level:{self.happiness_level}")
 
-
 class Zoo:
     def __init__(self, zoo_name):
         self.zoo_name = zoo_name
@@ -35,7 +34,6 @@ class Zoo:
         for animal in self.animals:
             print(animal)
 
-
 class Lion(Animal):
     def __init__(self, kind, healty_level=1, happiness_level=2):
         self.kind = kind
@@ -45,7 +43,6 @@ class Lion(Animal):
         self.healty_level += 5
         self.happiness_level += 4
 
-
 class Tiger(Animal):
     def __init__(self, kind, healty_level=1, happiness_level=2):
         self.kind = kind
@@ -54,7 +51,6 @@ class Tiger(Animal):
     def feed(self):
         self.healty_level += 9
         self.happiness_level += 3
-
 
 class Bear(Animal):
     def __init__(self, kind, healty_level=1, happiness_level=2):

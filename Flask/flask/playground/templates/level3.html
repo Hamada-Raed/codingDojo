@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level3</title>
+    <title>Level2</title>
     <style>
         header {
             width: 40em;
             margin: auto;
         }
-    
+
         h1 {
             text-align: center;
         }
-    
+
         main {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
         }
-    
+
         .box {
+            background-color: colorChange;
             border: 2px solid black;
             width: 6em;
             height: 6em;
@@ -30,14 +32,17 @@
         }
     </style>
 </head>
+
 <body>
+
     <header>
         <h1>Welcome!</h1>
         <main>
-            {% for times in range(int_num): %}
-            <div class="box"></div>
+            {% for times in range(repeat): %}
+                <div class="box"></div>
             {% endfor %}
         </main>
     </header>
 </body>
+
 </html>

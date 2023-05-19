@@ -6,14 +6,15 @@ def play():
     return render_template('level1.html')
 
 @app.route('/play/<x>')
-def play_times(x):
-    int_num = int(x)
-    return render_template('level2.html', int_num = 14) 
+def play_times(x): 
+    repeat = (int(x))
+    return render_template('level2.html', repeat = repeat )
 
-@app.route('/play/<x>/<color>')
-def play_times_color(x, color):
-    int_num = int(x)
-    return render_template('level2.html', int_num = 15 , color = 'red')
+@app.route("/play/<x>/<color>")
+def box_color(x,color):
+    repeat = (int(x))
+    colorChange = color
+    return render_template('level3.html', repeat = repeat, colorChange = colorChange )
 
 if __name__ == "__main__":
     app.run(debug=True)

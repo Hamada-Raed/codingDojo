@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Dojo Pizzeria</title>
+    <script src="script.js" async></script>
+</head>
+<body>
+    <h1> Hello World! </h1>
+    <h2> Name is {{name}} <h2> 
+    <h3> times {{times}} </h3>
+    {% for i in range (times)%}
+        {{name}}
+    {%endfor%} 
+    {% if name == "Hamada" %}
+        <p>The phrase says {{name}}</p>
+    {% endif %}
+</body>
+</html>

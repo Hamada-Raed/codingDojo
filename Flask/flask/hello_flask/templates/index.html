@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
-    <title>Dojo Pizzeria</title>
-    <script src="script.js" async></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/my_script.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Hello world!</title>
+   
 </head>
 <body>
-    <h1> Hello World! </h1>
-    <h2> Name is {{name}} <h2> 
-    <h3> times {{times}} </h3>
-    {% for i in range (times)%}
-        {{name}}
-    {%endfor%} 
-    {% if name == "Hamada" %}
-        <p>The phrase says {{name}}</p>
-    {% endif %}
+    <h1>Hamada Raed</h1>
+    <h1>Hello World!</h1>
+    <img src="{{ url_for('static', filename='imgs/landscape-nature-view-background-view-window-landscape-nature-view-background-view-window-wonderful-landscape-121459679.jpeg') }}">
 </body>
 </html>

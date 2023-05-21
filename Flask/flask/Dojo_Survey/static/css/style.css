@@ -1,0 +1,19 @@
+/* *{
+    border: 1px solid red;
+} */
+form {
+    border: 2px solid black;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+} 
+form div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+button{
+    padding: 10px;
+    margin: 10px;
+}

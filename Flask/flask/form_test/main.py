@@ -1,14 +1,11 @@
 from flask import Flask, render_template, request, redirect # added request
 app = Flask(__name__) 
 
-from flask import Flask, render_template
-app = Flask(__name__)
-
 @app.route('/')
 def index():
     return render_template("index.html")
 
-@app.route('/users', methods=['POST'])
+@app.route('/', methods=['POST'])
 def create_user():
     print("Got Post Info")
     print(request.form)

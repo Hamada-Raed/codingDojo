@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>Dojo Fruit Store</title>
+</head>
+
+<body>
+    <div class="continer">
+        <div class="left">
+            <h1>Dojo Fruit Store</h1>
+            <h2>what would you like to buy?</h2>
+            <form action='/checkout' method='post'>
+                <table class="table table-dark">
+                    <tr>
+                        <th>Fruit Name</th>
+                        <th>Quality</th>
+                    </tr>
+                    <tr>
+                        <td>Orange</td>
+                        <td><select name='Orange'>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td><select name='Apple'>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kiwi</td>
+                        <td><select name='Kiwi'>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <h3>Your information</h3>
+                <div><label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div><label for="id">Your Student ID:</label>
+                    <input type="text" id="id" name="id">
+                </div>
+                <button id="buy" class="bg-success text-white p-2">Buy me stuff</button>
+            </form>
+        </div>
+        <div class="right">
+            <h4>Welcome to Dojo Fruit Srote!</h4>
+            <p>Your dojo decided to but fruits for all the students. Please use with app to tell us what you wouldlike
+                to have!. Once we get your student account automatically.</p>
+            <p>Dojo Friut Stote is proudly bulit using Flask</p>
+        </div>
+    </div>
+</body>
+
+</html>

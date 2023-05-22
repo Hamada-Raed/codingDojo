@@ -7,8 +7,8 @@ def play():
 
 @app.route('/play/<x>')
 def play_times(x): 
-    repeat = (int(x))
-    return render_template('level2.html', repeat = repeat )
+    repeat = int(x)
+    return render_template('level2.html', repeat = repeat)
 
 @app.route("/play/<x>/<color>")
 def box_color(x,color):

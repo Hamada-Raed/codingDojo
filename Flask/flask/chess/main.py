@@ -22,7 +22,7 @@ def dynamicChess_in_x_y_color(x,y,color,color1):
     input_y = int(y)
     input_color = color
     input_color1 = color1
-    return render_template('index3.html', input_x=input_x, input_y=input_y, input_color1=input_color1, input_color= input_color)
+    return render_template('index3.html', input_x=input_x, input_y=input_y, input_color1=input_color1, input_color2= input_color)
 
 if __name__=="__main__":
     app.run(debug=True)

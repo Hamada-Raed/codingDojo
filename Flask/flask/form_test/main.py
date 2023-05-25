@@ -16,7 +16,7 @@ def create_user():
 
 @app.route('/show')
 def show_user(): 
-    return render_template ('show.html', name_on_form = session['username'], email_on_form = session['useremail'] )
+    return render_template ('show.html' )
  
 
 if __name__ == "__main__":

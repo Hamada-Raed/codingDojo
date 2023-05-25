@@ -1,22 +1,36 @@
-from flask import Flask, session, redirect, url_for
+from flask import Flask, session, redirect, render_template
+import random 
 
 app = Flask(__name__)
 app.secret_key = 'p@p#p$p%p6'  # Set a secret key for encryption
 
 @app.route('/')
-def index():
-    session['username'] = 'John'  # Storing data in the session = {dict}
-    return redirect('index.html')
+def index_():
+    session['guess_number'] = random.randint(1, 100)
+    guess_num = session['guess_number']
+    if  'massage' not in session:
+        session['massage']=''
 
-@app.route('/profile')
-def profile():
-    username = session.get('username')  # Retrieving data from the session
-    return f'Welcome, {username}'
+    return render_template ('index.html', massage =session['massage'] ) 
 
-@app.route('/logout')
-def logout():
-    session.pop('username', None)  # Removing data from the session
-    return 'Logged out successfully'
+@app.route('/check', methods=["post"])
+def guess(): 
+    num_form_form = int(request.form['num']) 
+    
+    if num_form_form == guess_num: 
+        massage = 'Right' 
+
+    elif num_form_form < guess_num:
+        massage= 'low'
+    
+    elif num_form_form > guess_num:
+        massage = 'high'
+
+
+    redirect('/')
+
+
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Ninja Game</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: aquamarine;
+        }
+
+        .gold_items {
+            display: flex;
+        }
+
+        form {
+            border: 2px solid black;
+            margin: 20px;
+            text-align: center;
+            background-color: aquamarine;
+            height: 180px;
+            width: 180px;
+            flex: 1;
+        }
+
+        #button {
+            background-color: blue;
+            color: white;
+            width: 100px;
+            height: 40px;
+        }
+
+        .box {
+            text-align: center;
+            color: rgb(238, 94, 5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Your Gold {{gold}}</h2>
+        <div class="gold_items">
+            <form action="/collect_money" method="POST">
+                <h2>Farm</h3>
+                    <h3>earns 10-20 gold</h3>
+                    <input type="hidden" name="building" value="farm" />
+                    <input type="submit" name="button" id="button" value="get_value" />
+
+            </form>
+            <form action="/collect_money" method="POST">
+                <h2>Cave</h3>
+                    <h3>earns 5-10 gold</h3>
+                    <input type="hidden" name="building" value="cave" />
+                    <input type="submit" name="button" id="button" value="get_value" />
+            </form>
+            <form action="/collect_money" method="POST">
+                <h2>House</h3>
+                    <h3>earns 2-5 gold</h3>
+                    <input type="hidden" name="building" value="house" />
+                    <input type="submit" name="button" id="button" value="get_value" />
+            </form>
+            <form action="/collect_money" method="POST">
+                <h2>Casino</h3>
+                    <h3>earns/lose 0-50 gold</h3>
+                    <input type="hidden" name="building" value="casino" />
+                    <input type="submit" name="button" id="button" value="get_value" />
+            </form>
+        </div>
+</body>
+
+</html>

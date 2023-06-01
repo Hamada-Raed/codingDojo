@@ -194,8 +194,6 @@ console.log(addTwoNumbers([1, 2, 3], [1, 2, 3]))
 
 
 //counter example
-
-
 function count(arr) {
     var countPositives = 0;
     for (var i = 0; i < arr.length; i++) {

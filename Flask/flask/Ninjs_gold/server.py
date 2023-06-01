@@ -8,7 +8,11 @@ app.secret_key='secret'
 def start():
     if 'gold' not in session: 
         session['gold'] = 0 
-    return render_template('index.html', gold=session['gold'])
+    if 'color' not in session:
+        session['color'] =''
+    if text not in session: 
+        session['text']=''
+    return render_template('index.html', gold=session['gold'], color=session['color'], text=session['text'])
 
 @app.route('/collect_money', methods=['POST'])
 def collect_money():
@@ -27,7 +31,7 @@ def collect_money():
         text = f"earned {amount} golds from the House!"
         session['gold']+= amount
     elif method == 'casino': 
-        amount = random.ransdint(-50,50)
+        amount = random.randint(-50,50)
         text = f"earned {amount} golds from the Casino!"
         session['gold']+= amount 
 
